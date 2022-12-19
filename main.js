@@ -66,18 +66,4 @@ $(document).ready(function () {
             }
         }]
     });
-
-    $(".accordion div:first").addClass("active");
-    $(".accordion p:not(:first)").hide();
-    $(".accordion h3").click(function () {
-        if (!$(this).parent().hasClass("active")) {
-            $(".accordion p:visible").slideUp("fast");
-            $(this).next("p").slideToggle("fast");
-            $(".accordion div").removeClass("active");
-            $(this).parent().toggleClass("active");
-        } else {
-            $(this).next("p").slideUp("fast");
-            $(this).parent().removeClass("active");
-        }
-    });
 });
